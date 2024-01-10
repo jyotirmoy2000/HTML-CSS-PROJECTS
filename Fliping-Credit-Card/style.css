@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17, 17, 43);
+    perspective: 1000;
+}
+.wrapper::before{
+  content: "";
+  position: absolute;
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  transform:translate(-300px ,-150px) ;
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+}
+.wrapper::after{
+    content: "";
+    position: absolute;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    transform:translate(300px ,150px) ;
+    background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+  }
+.card-container{
+    position: relative;
+    background:rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 3rem;
+    padding: 2rem;
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.card-container:hover{
+    transform: rotateY(180deg);
+}
+
+.card-banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+.card-header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card-logo{
+    width: 4rem;
+}
+
+.card-chip-logo{
+    width: 5rem;
+}
+.card-heading{
+    color: #fff;
+}
+.card-number-heading{
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.card-number{
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.card-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.card-name h2{
+    color: #fff;
+    font-weight: 400;
+}
+.validity-details{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
